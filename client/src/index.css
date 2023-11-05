@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply !outline-none font-display;
+}
+
+::selection {
+  @apply text-white bg-black;
+}
+
+.f-ic-jb {
+  @apply flex items-center justify-between;
+}
+
+/* @layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+} */
+
+@layer components {
+  /* .header-container {
+    @apply ;
+  } */
+}
+
+/* Price Range Filter */
+.field-input {
+  @apply w-full h-full outline-none rounded-3xl text-center font-semibold border-2 border-gray-200;
+}
+
+.range-input {
+  @apply absolute w-full h-2 -top-[8px] pointer-events-none;
+  background: none;
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply h-5 w-5 border-none rounded-full bg-black pointer-events-auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-5 w-5 border-none rounded-full bg-black pointer-events-auto;
+  -webkit-appearance: none;
+}
